@@ -16,8 +16,9 @@ def file_downloader(file):
     path = f"./uploads/"
     try:
         return send_file(path + file,
-                attachment_filename = file,
-                as_attachment=False)
+#               attachment_filename = file,
+                download_name = file,
+                as_attachment = False)
     except FileNotFoundError:
         return render_template('error.html', error="404 Not Found<br><br>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again."), 404
     except:
