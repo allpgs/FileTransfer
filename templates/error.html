@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>{{ error }} : File Transfer</title>
+    <meta name="description" content="File Transfer" />
+    <meta id="embed-title" property="og:title" content="{{ error }} : File Transfer" />
+    <meta id="embed-desc" property="og:description" content="File Transfer" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.9.4/dist/css/uikit.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.9.4/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.9.4/dist/js/uikit-icons.min.js"></script>
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+      @import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+
+      @font-face {
+          font-family: 'NanumSquareRound';
+          src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff');
+          font-weight: normal;
+          font-style: normal;
+      }
+
+      * { 
+        font-family: 'NanumSquare' !important; 
+      }
+
+      .notosanskr,
+      .notosanskr * { 
+      font-family: 'Noto Sans KR', sans-serif !important;
+      }
+
+      .nanumsquareround,
+      .nanumsquareround * { 
+        font-family: 'NanumSquareRound' !important; 
+      }
+
+      .nanumsquare,
+      .nanumsquare * { 
+        font-family: 'NanumSquare' !important; 
+      }
+
+      ::-moz-selection {
+        color: #000000;
+        background: #F0F8FF;
+      }
+
+      ::selection {
+        color: #000000;
+        background: #F0F8FF;
+      }
+
+      .heart {
+        color: #e25555;
+      }
+
+      .bold {
+        font-weight: 500;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <br /><br /><br />
+      <div class="uk-container uk-container-small uk-flex-auto uk-text-center">
+        <h1 class="bold">File Transfer</h1>
+        <!-- <div class="uk-width-4-5@m uk-margin-auto">
+          <p class="lead bold"></p>
+        </div> -->
+
+        <div style="margin-top: 80px;"></div>
+        
+        <p class="headline">
+          {{ error | safe }}
+        </p>
+
+        <div style="margin-top: 30px;"></div>
+        <a href="/" class="uk-button uk-button-secondary">확인</a>
+      </div>
+    </main>
+
+    <footer>
+      <br/><br/>
+      <div class="uk-container uk-container-small uk-flex-auto uk-text-center">
+        <div class="uk-width-4-5@m uk-margin-auto">
+          <span class="uk-text-small uk-text-center">Backend & Frontend with <span class="heart">❤</span> in <a href="https://sskate.me">SSKATE</span></a></span>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+
+      (function (useragent) {
+        if (!window.isShowWarning && window.parent === window.self) {
+          console.log('%c위험!', // eslint-disable-next-line max-len
+          'color: red; font-size: 60px; font-family: sans-serif; font-weight: bold; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;');
+          console.log( // eslint-disable-next-line max-len
+          '%c이 기능은 일반 사용자가 아닌 개발자를 위해 브라우저에서 제공하는 기능입니다. 여기에 별도의 코드를 입력해 본 서비스를 비정상적인 방법으로 이용하거나, 다른 사용자의 파일 혹은 서버 등에 영향을 주는 등 서비스 운영에 지장을 줄 수 있는 행위를 해서는 안 됩니다. 해당 행위의 적발 시 본 서비스 이용 정지 또는 접속 차단이 적용될 수 있으며, 그 정도가 심각한 경우 서비스 상의 제재와 별개로 상응한 법적 조치를 취할 수 있습니다. 또한, 이로 인해 행위자 본인에게 발생하는 피해는 본 서비스 운영자가 책임지지 않습니다.', 'font-size:15px');
+        }
+
+        window.isShowWarning = true;
+
+        if (useragent && useragent.Agent && useragent.Agent.isIE) {
+          window.requestAnimationFrame = window.requestAnimationFrame.bind(window);
+        }
+      })(undefined);
+      
+    </script>
+  </body>
+</html>
