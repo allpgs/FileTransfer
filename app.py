@@ -9,7 +9,7 @@ def file_uploader():
     else:
       f = request.files['file']
       f.save("./uploads/" + secure_filename(f.filename))
-      return render_template('complate.html')
+      return render_template('complete.html')
 
 @app.route('/<file>', methods=['GET', 'POST'])
 def file_downloader(file):
